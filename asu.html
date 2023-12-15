@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>button</title>
+  <style>
+    button {
+      border-radius: 8px;
+      padding: 10px 20px;
+    }
+  </style>
+  <script>
+    function showAlertDialog() {
+      alert('Tombol telah ditekan!');
+      setTimeout(function () {
+        var confirmation = confirm('Apakah Anda yakin ingin menutup browser?');
+        if (confirmation) {
+          window.open('', '_self', ''); // Membuka jendela baru untuk memastikan dapat menutup
+          window.close(); // Menutup jendela browser
+        }
+      }, 1000);
+    }
+  </script>
+</head>
+
+<body>
+  <h2>Belajar Tombol</h2>
+  <button type="button" onclick="showAlertDialog()">Sentuh saya</button>
+</body>
+
+</html>
